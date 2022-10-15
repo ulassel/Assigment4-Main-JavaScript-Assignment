@@ -6,18 +6,22 @@ function playRound(playerSelection, computerSelection){
     const options = ["rock", "paper", "scissors"];
     playerSelection = "";
     playerSelection = prompt("What is your selection? (Rock-Paper-Scissors):").toLowerCase();
+    
     while(!options.includes(playerSelection)){
         playerSelection = prompt("Please enter a valid value (Rock-Paper-Scissors):").toLowerCase();
     }
+    
     computerSelection = "";
     computerSelection = computerPlay();
-
     const results = [["t", "c", "p"], 
                      ["p", "t", "c"], 
                      ["c", "p", "t"]];
+                     
     console.log(`Player choice: ${playerSelection}`);
     console.log(`Computer choice: ${options[computerSelection]}`);
+    
     playerSelection = options.indexOf(playerSelection);
+    
     return results[playerSelection][computerSelection];
 }
 
@@ -28,6 +32,7 @@ function game(){
 
     for(let i = 0; i<5; i++){
         result = playRound();
+        
         switch(result){
             case "p":
                 player++;
@@ -41,8 +46,6 @@ function game(){
                 console.log(`It's a draw! Player: ${player} - Computer: ${computer}`);
         }
     }
-
-
 
     if(player > computer){
         console.log("Player wins the game!");
