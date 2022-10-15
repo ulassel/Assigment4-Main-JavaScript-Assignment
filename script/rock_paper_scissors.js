@@ -16,7 +16,7 @@ function playRound(playerSelection, computerSelection){
                   ["c", "p", "t"]] 
     playerSelection = options.indexOf(playerSelection);
 
-    return results[computerSelection][playerSelection];
+    return results[playerSelection][computerSelection];
 }
 
 function game(){
