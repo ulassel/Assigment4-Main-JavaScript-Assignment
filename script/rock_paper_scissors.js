@@ -26,15 +26,14 @@ function game(){
 
     for(let i = 0; i<5; i++){
         result = playRound();
-
         if(result == "p"){
-            console.log("Player wins this round!");
             player++;
+            console.log(`Player wins this round! Player: ${player} - Computer: ${computer}`);
         }else if(result == "c"){
-            console.log("Computer wins this round!");
             computer++;
+            console.log(`Computer wins this round! Player: ${player} - Computer: ${computer}`);
         }else if (result == "t"){
-            console.log("It's a draw!");
+            console.log(`It's a draw! Player: ${player} - Computer: ${computer}`);
         }
     }
 
