@@ -13,8 +13,8 @@ function playRound(playerSelection, computerSelection){
     computerSelection = computerPlay();
 
     const results = [["t", "c", "p"], 
-                   ["p", "t", "c"], 
-                   ["c", "p", "t"]];
+                     ["p", "t", "c"], 
+                     ["c", "p", "t"]];
     console.log(`Player choice: ${playerSelection}`);
     console.log(`Computer choice: ${options[computerSelection]}`);
     playerSelection = options.indexOf(playerSelection);
