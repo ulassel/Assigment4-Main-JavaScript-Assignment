@@ -3,17 +3,18 @@ function computerPlay(){
 }
 
 function playRound(playerSelection, computerSelection){
-    let options = ["rock", "paper", "scissors"];
+    const options = ["rock", "paper", "scissors"];
     playerSelection = "";
     playerSelection = prompt("What is your selection? (Rock-Paper-Scissors):").toLowerCase();
     while(!options.includes(playerSelection)){
         playerSelection = prompt("Please enter a valid value (Rock-Paper-Scissors):").toLowerCase();
     }
+    computerSelection = "";
     computerSelection = computerPlay();
 
-    let results = [["t", "c", "p"], 
-                  ["p", "t", "c"], 
-                  ["c", "p", "t"]]
+    const results = [["t", "c", "p"], 
+                   ["p", "t", "c"], 
+                   ["c", "p", "t"]];
     console.log(`Player choice: ${playerSelection}`);
     console.log(`Computer choice: ${options[computerSelection]}`);
     playerSelection = options.indexOf(playerSelection);
@@ -23,7 +24,7 @@ function playRound(playerSelection, computerSelection){
 function game(){
     let player = 0;
     let computer = 0;
-    let result;
+    let result = "";
 
     for(let i = 0; i<5; i++){
         result = playRound();
