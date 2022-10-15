@@ -33,7 +33,7 @@ function game(){
         }else if(result == "c"){
             console.log("Computer wins this round!");
             computer++;
-        }else{
+        }else if (result == "t"){
             console.log("It's a draw!");
         }
     }
@@ -42,7 +42,7 @@ function game(){
         console.log("Player wins the game!");
     }else if(computer > player){
         console.log("Computer wins the game!");
-    }else{
+    }else if(computer == player){
         console.log("It's a draw! No one wins the game!");
     }
 }
