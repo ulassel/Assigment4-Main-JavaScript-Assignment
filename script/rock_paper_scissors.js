@@ -27,16 +27,21 @@ function game(){
 
     for(let i = 0; i<5; i++){
         result = playRound();
-        if(result == "p"){
-            player++;
-            console.log(`Player wins this round! Player: ${player} - Computer: ${computer}`);
-        }else if(result == "c"){
-            computer++;
-            console.log(`Computer wins this round! Player: ${player} - Computer: ${computer}`);
-        }else if (result == "t"){
-            console.log(`It's a draw! Player: ${player} - Computer: ${computer}`);
+        switch(result){
+            case "p":
+                player++;
+                console.log(`Player wins this round! Player: ${player} - Computer: ${computer}`);
+                break;
+            case "c":
+                computer++;
+                console.log(`Computer wins this round! Player: ${player} - Computer: ${computer}`);
+                break;
+            case "t":
+                console.log(`It's a draw! Player: ${player} - Computer: ${computer}`);
         }
     }
+
+
 
     if(player > computer){
         console.log("Player wins the game!");
