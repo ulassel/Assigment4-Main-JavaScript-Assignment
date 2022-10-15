@@ -3,14 +3,17 @@ function computerPlay(){
 }
 
 function playRound(playerSelection, computerSelection){
+    let options = ["rock", "paper", "scissors"];
+    playerSelection = "";
     playerSelection = prompt("What is your selection? (Rock-Paper-Scissors):").toLowerCase();
+    while(!options.includes(playerSelection)){
+        playerSelection = prompt("Please enter a valid value (Rock-Paper-Scissors):").toLowerCase();
+    }
     computerSelection = computerPlay();
 
     let results = [["t", "c", "p"], 
                   ["p", "t", "c"], 
-                  ["c", "p", "t"]]
-
-    let options = ["rock", "paper", "scissors"];
+                  ["c", "p", "t"]] 
     playerSelection = options.indexOf(playerSelection);
 
     return results[computerSelection][playerSelection];
@@ -36,11 +39,11 @@ function game(){
     }
 
     if(player > computer){
-        return "Player wins the game!";
+        console.log("Player wins the game!");
     }else if(computer > player){
-        return "Computer wins the game!";
+        console.log("Computer wins the game!");
     }else{
-        return "It's a draw!";
+        console.log("It's a draw! No one wins the game!");
     }
 }
 
