@@ -5,10 +5,10 @@ function computerPlay(){
 function playRound(playerSelection, computerSelection){
     const options = ["rock", "paper", "scissors"];
     playerSelection = "";
-    playerSelection = prompt("What is your selection? (Rock-Paper-Scissors):").toLowerCase();
+    playerSelection = prompt("What is your selection? (Rock-Paper-Scissors):").toLowerCase().trim();
     
     while(!options.includes(playerSelection)){
-        playerSelection = prompt("Please enter a valid value (Rock-Paper-Scissors):").toLowerCase();
+        playerSelection = prompt("Please enter a valid value (Rock-Paper-Scissors):").toLowerCase().trim();
     }
     
     computerSelection = "";
